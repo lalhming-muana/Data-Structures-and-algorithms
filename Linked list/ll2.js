@@ -1,22 +1,15 @@
-console.log("Hello")
+// Creating a new NODE class
 
-// Implementing a linked list in javascript because JS doesnt jave a built-in linked list
-
-// Create a pointer
-const obj1 ={a: true}
-const obj2 = obj1
-
-console.log(obj1)
-console.log(obj2)
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
+}
 
 
-// Add a note about JS garbage collection here
+// Re-create everything using the class Node and combine it with the old linked list
 
-
-
-
-// Create the linked list here.
-// 10 -> 5 -> 16
 class LinkedList  {
     constructor(value){
         this.head = {
@@ -28,10 +21,7 @@ class LinkedList  {
     }
 
     append(value){
-        const newNode = {
-            value: value,
-            next: null
-        };
+        const newNode = new Node(value);
         this.tail.next = newNode;
         this.tail = newNode;
         this.length++;
@@ -39,11 +29,7 @@ class LinkedList  {
     }
 
     prepend(value){
-        const newNode ={
-            value: value,
-            next: null
-        };
-
+        const newNode = new Node(value);
         newNode.next = this.head;
         this.head = newNode;
         this.length++;
@@ -51,12 +37,9 @@ class LinkedList  {
 
 }
 
+
 const myLinkedlist = new LinkedList(10);
 myLinkedlist.append(5)
 myLinkedlist.append(16)
 myLinkedlist.prepend(1)
-
 console.log(myLinkedlist);
-
-
-
