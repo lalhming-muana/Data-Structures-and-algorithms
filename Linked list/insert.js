@@ -45,6 +45,8 @@ class LinkedList  {
 
     }
 
+    // i havent been able to do anything yet. so this is blank
+
     insert(index, value){
 
     }
