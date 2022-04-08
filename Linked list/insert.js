@@ -42,10 +42,10 @@ class LinkedList  {
             array.push(currentNode.value);
             currentNode = currentNode.next;
         }
-
+        return array;
     }
 
-    // i havent been able to do anything yet. so this is blank
+    // I havent been able to do anything yet. So, this is blank.
 
     insert(index, value){
 
@@ -58,4 +58,6 @@ const myLinkedlist = new LinkedList(10);
 myLinkedlist.append(5)
 myLinkedlist.append(16)
 myLinkedlist.prepend(1)
-console.log(myLinkedlist);
+// console.log(myLinkedlist);
+myLinkedlist.insert(2,99);
+console.log(myLinkedlist.printlist());
