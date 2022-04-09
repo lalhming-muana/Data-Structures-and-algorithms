@@ -48,8 +48,22 @@ class LinkedList  {
     // I havent been able to do anything yet. So, this is blank.
 
     insert(index, value){
+        // check the parameters
+        if(index >= this.length){
+            return this.append(value);
+        }
+
+        const newNode ={
+            value: value,
+            next: null
+        };
+
+        const leader = this.traverseToIndex(index - 1);
+
 
     }
+
+    traverseToIndex(index)
 
 }
 
