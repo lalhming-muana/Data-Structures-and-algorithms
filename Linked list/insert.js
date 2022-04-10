@@ -63,7 +63,16 @@ class LinkedList  {
 
     }
 
-    traverseToIndex(index)
+    traverseToIndex(index){
+        //check params
+        let counter = 0;
+        let currentNode = this.head;
+        while(counter !=index){
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode;
+    }
 
 }
 
