@@ -58,11 +58,16 @@ class LinkedList  {
             next: null
         };
 
-        const leader = this.traverseToIndex(index - 1);
+        // leader is the first node of the linked list to which the new node should be added
+        const leader = this.traverseToIndex(index-1);
+        const holdingPointer = leader.next; // holds the second node of the linked list
+        leader.next = newNode;
+        newNode.next = holdingPointer;
+        this.length++;
 
 
     }
-
+    // loop to find the leading node of the linked list.
     traverseToIndex(index){
         //check params
         let counter = 0;
@@ -74,13 +79,20 @@ class LinkedList  {
         return currentNode;
     }
 
+    // 
+
 }
 
 
 const myLinkedlist = new LinkedList(10);
 myLinkedlist.append(5)
+
 myLinkedlist.append(16)
+
 myLinkedlist.prepend(1)
+
 // console.log(myLinkedlist);
 myLinkedlist.insert(2,99);
+
+myLinkedlist.insert(30,88);
 console.log(myLinkedlist.printlist());
