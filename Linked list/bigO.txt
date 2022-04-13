@@ -1,1 +1,11 @@
 This file contains notes from Big O
+
+Rule 3: Ignore the constants
+
+eg:
+3 + 2n+ 4
+will equate to
+n
+
+n/2 + 7 will equate to
+n
